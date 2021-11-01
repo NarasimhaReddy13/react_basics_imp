@@ -1,0 +1,150 @@
+*  React JS is UI Library
+*  Developed by Facebook, Open Source, Released on 2013
+
+
+
+Applications:
+    * To develop Single Page Wed Applications
+    * React Native (Similar syntax to React JS) - to develop Cross-Platform Mobile Applications 
+    * Uses Virtual DOM for updating the DOM changes 
+
+
+
+Virtual DOM :-- 
+    * It takes lightweight copy of Real DOM - and keeps in memory and syncs with Real DOM by using ReactDOM Library
+    * It improves lots of performance.
+
+
+
+How to create React JS Project ????
+    * npm install create-react-app -g
+      create-react-app myproject
+
+            (or)
+
+    * npx create-react-app myproject --- it will create the create-react-app and delete create-react-app after project setup
+
+
+
+
+JSX Syntax -:-- JavaScript + XML syntax
+    JavaScript Syntax -:--    let button;
+
+    XML Syntax -:---- <button> Click </button>     
+
+    JSX Syntax :--  let button = <button> Click </button>
+
+
+
+
+
+JSX is not mandatory (button recommended to use - Can build react applications very fast ) **
+
+
+
+
+* we can also use -- babel syntax instead of JSX
+import React from 'react'
+
+let button = React.createElement('button', null, 'Hello')    
+       ----- React.createElement(HTML Tag/React Component, Properties, Children)
+
+
+**** Equivalent to     let button = <button> Hello </button>
+
+
+
+
+
+To know babel syntax ----- Babel is the compiler for JSX Syntax
+    * babeljs.io     -- in chrome
+    * Click on ----   Try it out
+
+
+
+
+onclick ---  onClick 
+checked ---  defaultChecked
+selected --- defaultSelected
+
+
+style = "normal css"  ---- style = {{ camelCase css}}
+
+
+
+
+
+
+<Button title='Click'> Hello </Button>  -- * try this once 
+<Button title={'Click'} />
+
+
+
+* Component name must starts with Capital 
+  ( because there will be confusion in understanding whether it is a button Component   or   html button)
+
+
+
+
+Props  --
+    * is simply means  attributes in HTML
+    * Any valid JS expression can be passed as data between components
+
+
+    * The data can be passed in one way only (Unidirectional -- Top to Down)
+
+
+
+
+State --
+    * is a Local variable for the Component
+    * Any state in one component won't be accessible to other component
+
+
+
+
+
+==============================================================================================================================
+
+* After running in terminal - If UI is not displayed automatically in default browser
+    Then :-- 
+
+            * Outside the project (i.e src) -- create a file --    .env.development 
+            * In above file -----     BROWSER=chrome 
+
+
+
+            * Can do some changes in index.js file -- and reload the browser ( automatic save will not work for some files )
+
+
+
+this.state.users.map((user, index) => (
+    <p className="" key={index}> {index} {user.name} </p>
+))
+
+* When to use this index as a key ????
+    * Data must be static (i.e not be modified)
+    * When we are not doing filterings
+
+
+( when we add, item to start --- it checks all elements and replaces all elements -- so must use key )
+
+
+
+
+
+
+
+<b> Developer </b>   --- bold 
+
+
+
+
+
+css:
+     transform: rotate(-45deg);
+     position: absolute;
+     top: 40px;
+     left: -30px;
+
+
